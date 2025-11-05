@@ -1,0 +1,8 @@
+wwwroot\css\app.css
+wwwroot\css\bootstrap\bootstrap.min.css
+wwwroot\css\bootstrap\bootstrap.min.css.map
+wwwroot\index.html
+C:\Users\Admin user\source\repos\MatricLink\wwwroot\css\app.css
+C:\Users\Admin user\source\repos\MatricLink\wwwroot\css\bootstrap\bootstrap.min.css
+C:\Users\Admin user\source\repos\MatricLink\wwwroot\css\bootstrap\bootstrap.min.css.map
+C:\Users\Admin user\source\repos\MatricLink\wwwroot\index.html
