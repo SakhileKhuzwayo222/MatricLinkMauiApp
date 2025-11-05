@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Results - Matric Link</title>
+    <link rel="stylesheet" href="css/results-submission.css">
+    <script src="js/results-submission.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">ML</div>
+                    <div class="logo-text">Matric<span>Link</span></div>
+                </a>
+                
+                <nav class="nav-primary">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    <a href="course-recommendations.html" class="nav-link">Courses</a>
+                    <a href="institution-portals.html" class="nav-link">Institutions</a>
+                    <a href="results-submission.html" class="nav-link active">Submit Results</a>
+                </nav>
+                
+                <div class="user-nav">
+                    <div class="user-avatar">JS</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="dashboard">
+            <aside class="sidebar">
+                <nav class="sidebar-nav">
+                    <a href="dashboard.html" class="sidebar-link">
+                        <i>📊</i> Overview
+                    </a>
+                    <a href="results-submission.html" class="sidebar-link active">
+                        <i>📝</i> Submit Results
+                    </a>
+                    <a href="course-recommendations.html" class="sidebar-link">
+                        <i>🎯</i> Course Recommendations
+                    </a>
+                    <a href="institution-portals.html" class="sidebar-link">
+                        <i>🏫</i> Institutions
+                    </a>
+                    <a href="profile.html" class="sidebar-link">
+                        <i>👤</i> My Profile
+                    </a>
+                </nav>
+            </aside>
+
+            <div class="dashboard-content">
+                <!-- Progress Indicator -->
+                <div class="progress-indicator">
+                    <div class="progress-line">
+                        <div class="progress-fill" style="width: 25%"></div>
+                    </div>
+                    <div class="progress-step">
+                        <div class="step-number active">1</div>
+                        <div class="step-label">Enter Results</div>
+                    </div>
+                    <div class="progress-step">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Add Interests</div>
+                    </div>
+                    <div class="progress-step">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Preferences</div>
+                    </div>
+                    <div class="progress-step">
+                        <div class="step-number">4</div>
+                        <div class="step-label">Get Recommendations</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Submit Your Matric Results</h2>
+                        <p>Enter your subject marks to get personalized course recommendations</p>
+                    </div>
+                    <div class="card-body">
+                        <form id="resultsForm">
+                            <div class="subjects-grid">
+                                <!-- Mathematics -->
+                                <div class="subject-card">
+                                    <h4 class="subject-name">Mathematics</h4>
+                                    <div class="form-group">
+                                        <label class="form-label">Final Mark (%)</label>
+                                        <input type="number" class="form-control" min="0" max="100" placeholder="Enter your mark" data-required="true">
+                                        <div class="error-message">Please enter a valid mark between 0-100</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Level</label>
+                                        <select class="form-control" data-required="true">
+                                            <option value="">Select Level</option>
+                                            <option value="mathematical_literacy">Mathematical Literacy</option>
+                                            <option value="mathematics">Mathematics</option>
+                                            <option value="advanced_maths">Advanced Programme Mathematics</option>
+                                        </select>
+                                        <div class="error-message">Please select a level</div>
+                                    </div>
+                                </div>
+
+                                <!-- English -->
+                                <div class="subject-card">
+                                    <h4 class="subject-name">English Home Language</h4>
+                                    <div class="form-group">
+                                        <label class="form-label">Final Mark (%)</label>
+                                        <input type="number" class="form-control" min="0" max="100" placeholder="Enter your mark" data-required="true">
+                                        <div class="error-message">Please enter a valid mark between 0-100</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Level</label>
+                                        <select class="form-control" data-required="true">
+                                            <option value="">Select Level</option>
+                                            <option value="home_language">Home Language</option>
+                                            <option value="first_additional">First Additional Language</option>
+                                        </select>
+                                        <div class="error-message">Please select a level</div>
+                                    </div>
+                                </div>
+
+                                <!-- Physical Sciences -->
+                                <div class="subject-card">
+                                    <h4 class="subject-name">Physical Sciences</h4>
+                                    <div class="form-group">
+                                        <label class="form-label">Final Mark (%)</label>
+                                        <input type="number" class="form-control" min="0" max="100" placeholder="Enter your mark">
+                                        <div class="error-message">Please enter a valid mark between 0-100</div>
+                                    </div>
+                                </div>
+
+                                <!-- Life Sciences -->
+                                <div class="subject-card">
+                                    <h4 class="subject-name">Life Sciences</h4>
+                                    <div class="form-group">
+                                        <label class="form-label">Final Mark (%)</label>
+                                        <input type="number" class="form-control" min="0" max="100" placeholder="Enter your mark">
+                                        <div class="error-message">Please enter a valid mark between 0-100</div>
+                                    </div>
+                                </div>
+
+                                <!-- Additional Subjects -->
+                                <div class="subject-card">
+                                    <h4 class="subject-name">Additional Subject 1</h4>
+                                    <div class="form-group">
+                                        <label class="form-label">Subject Name</label>
+                                        <input type="text" class="form-control" placeholder="e.g., Accounting, Geography">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Final Mark (%)</label>
+                                        <input type="number" class="form-control" min="0" max="100" placeholder="Enter your mark">
+                                        <div class="error-message">Please enter a valid mark between 0-100</div>
+                                    </div>
+                                </div>
+
+                                <div class="subject-card">
+                                    <h4 class="subject-name">Additional Subject 2</h4>
+                                    <div class="form-group">
+                                        <label class="form-label">Subject Name</label>
+                                        <input type="text" class="form-control" placeholder="e.g., History, Economics">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Final Mark (%)</label>
+                                        <input type="number" class="form-control" min="0" max="100" placeholder="Enter your mark">
+                                        <div class="error-message">Please enter a valid mark between 0-100</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Career Interests -->
+                            <div class="form-group">
+                                <label class="form-label">Career Interests</label>
+                                <select class="form-control" multiple>
+                                    <option value="engineering">Engineering & Technology</option>
+                                    <option value="health">Health Sciences</option>
+                                    <option value="business">Business & Commerce</option>
+                                    <option value="arts">Arts & Humanities</option>
+                                    <option value="sciences">Natural Sciences</option>
+                                    <option value="education">Education</option>
+                                    <option value="law">Law & Justice</option>
+                                </select>
+                                <small>Hold Ctrl/Cmd to select multiple interests</small>
+                            </div>
+
+                            <!-- Preferred Institutions -->
+                            <div class="form-group">
+                                <label class="form-label">Preferred Institution Types</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="institution_type" value="university"> University</label>
+                                    <label><input type="checkbox" name="institution_type" value="university_of_technology"> University of Technology</label>
+                                    <label><input type="checkbox" name="institution_type" value="college"> TVET College</label>
+                                    <label><input type="checkbox" name="institution_type" value="private"> Private Institution</label>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Get Course Recommendations</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Matric Link</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/dashboard.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-text">Matric<span>Link</span></div>
+                </a>
+                
+                <nav class="nav-primary">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="dashboard.html" class="nav-link active">Dashboard</a>
+                    <a href="course-recommendations.html" class="nav-link">Courses</a>
+                    <a href="institution-portals.html" class="nav-link">Institutions</a>
+                    <a href="results-submission.html" class="nav-link">Submit Results</a>
+                </nav>
+                
+                <div class="user-nav">
+                    <div class="user-avatar">JS</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="dashboard">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <nav class="sidebar-nav">
+                    <a href="dashboard.html" class="sidebar-link active">
+                        <i>📊</i> Overview
+                    </a>
+                    <a href="results-submission.html" class="sidebar-link">
+                        <i>📝</i> Submit Results
+                    </a>
+                    <a href="course-recommendations.html" class="sidebar-link">
+                        <i>🎯</i> Course Recommendations
+                    </a>
+                    <a href="institution-portals.html" class="sidebar-link">
+                        <i>🏫</i> Institutions
+                    </a>
+                    <a href="profile.html" class="sidebar-link">
+                        <i>👤</i> My Profile
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="dashboard-content">
+                <!-- Welcome Header -->
+                <div class="welcome-header">
+                    <h2 class="card-title">Welcome back, John!</h2>
+                    <p>Here's your application progress overview</p>
+                </div>
+
+                <div class="card mb-8">
+                    <div class="card-header">
+                        <h3 class="card-title">Application Status Summary</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">📊</div>
+                                <h4>Results Status</h4>
+                                <p class="status-badge status-complete">Submitted</p>
+                                <p>Your matric results have been analyzed</p>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon">🎯</div>
+                                <h4>Course Matches</h4>
+                                <p class="status-badge status-in-progress">5 Recommended</p>
+                                <p>Based on your results and interests</p>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon">🏫</div>
+                                <h4>Institutions</h4>
+                                <p class="status-badge status-pending">3 Selected</p>
+                                <p>Ready for application</p>
+                            </div>
+
+                            <div class="feature-card">
+                                <div class="feature-icon">📈</div>
+                                <h4>Overall Progress</h4>
+                                <p class="status-badge status-in-progress">65% Complete</p>
+                                <p>You're on track for success!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Recommended Action Items</h3>
+                        <p>Priority tasks to complete your applications</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="courses-grid">
+                            <div class="course-card">
+                                <div class="course-header">
+                                    <h4 class="course-title">Complete UCT Application</h4>
+                                    <p class="course-institution">University of Cape Town</p>
+                                </div>
+                                <div class="course-body">
+                                    <p><strong>Deadline:</strong> 30 September 2024</p>
+                                    <p><strong>Next Step:</strong> Submit supporting documents</p>
+                                    <div class="progress-bar mb-4">
+                                        <div class="progress-fill" style="width: 60%"></div>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="continueApplication('UCT')">Continue Application</button>
+                                </div>
+                            </div>
+                            
+                            <div class="course-card">
+                                <div class="course-header">
+                                    <h4 class="course-title">Submit Wits Documents</h4>
+                                    <p class="course-institution">Wits University</p>
+                                </div>
+                                <div class="course-body">
+                                    <p><strong>Required:</strong> ID Copy & Results</p>
+                                    <p><strong>Deadline:</strong> 15 October 2024</p>
+                                    <div class="progress-bar mb-4">
+                                        <div class="progress-fill" style="width: 30%"></div>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="uploadDocuments('Wits')">Upload Documents</button>
+                                </div>
+                            </div>
+
+                            <div class="course-card">
+                                <div class="course-header">
+                                    <h4 class="course-title">Review UP Offer</h4>
+                                    <p class="course-institution">University of Pretoria</p>
+                                </div>
+                                <div class="course-body">
+                                    <p><strong>Status:</strong> Conditional Offer Received</p>
+                                    <p><strong>Action Required:</strong> Accept by 25 September</p>
+                                    <div class="progress-bar mb-4">
+                                        <div class="progress-fill" style="width: 80%"></div>
+                                    </div>
+                                    <button class="btn btn-primary" onclick="reviewOffer('UP')">Review Offer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">Matric<span>Link</span></div>
+                    <p>Empowering South African students to make informed decisions about their tertiary education future.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="course-recommendations.html">Courses</a></li>
+                        <li><a href="institution-portals.html">Institutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="results-submission.html">Submit Results</a></li>
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="#">Application Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2024 Matric Link. All rights reserved. | Empowering South Africa's Future
+            </div>
+        </div>
+    </footer>
+    </main>
+ 
+</body>
+</html>

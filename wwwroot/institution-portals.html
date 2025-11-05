@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institution Portals - Matric Link</title>
+    <link rel="stylesheet" href="css/institution-portals.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">ML</div>
+                    <div class="logo-text">Matric<span>Link</span></div>
+                </a>
+                
+                <nav class="nav-primary">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    <a href="course-recommendations.html" class="nav-link">Courses</a>
+                    <a href="institution-portals.html" class="nav-link active">Institutions</a>
+                    <a href="results-submission.html" class="nav-link">Submit Results</a>
+                </nav>
+                
+                <div class="user-nav">
+                    <div class="user-avatar">JS</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="dashboard">
+            <aside class="sidebar">
+                <nav class="sidebar-nav">
+                    <a href="dashboard.html" class="sidebar-link">
+                        <i>📊</i> Overview
+                    </a>
+                    <a href="results-submission.html" class="sidebar-link">
+                        <i>📝</i> Submit Results
+                    </a>
+                    <a href="course-recommendations.html" class="sidebar-link">
+                        <i>🎯</i> Course Recommendations
+                    </a>
+                    <a href="institution-portals.html" class="sidebar-link active">
+                        <i>🏫</i> Institutions
+                    </a>
+                    <a href="profile.html" class="sidebar-link">
+                        <i>👤</i> My Profile
+                    </a>
+                </nav>
+            </aside>
+
+            <div class="dashboard-content">
+                <!-- Institution Search -->
+                <div class="card mb-8">
+                    <div class="card-header">
+                        <h2 class="card-title">Find Your Ideal Institution</h2>
+                        <p>Browse universities and colleges that match your preferences</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search institutions by name, location, or course...">
+                        </div>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <h4>Filter by Type</h4>
+                                <div class="form-group">
+                                    <label><input type="checkbox" checked> University</label>
+                                    <label><input type="checkbox"> University of Technology</label>
+                                    <label><input type="checkbox"> TVET College</label>
+                                    <label><input type="checkbox"> Private Institution</label>
+                                </div>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Filter by Location</h4>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option>All Provinces</option>
+                                        <option>Gauteng</option>
+                                        <option>Western Cape</option>
+                                        <option>KwaZulu-Natal</option>
+                                        <option>Eastern Cape</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommended Institutions -->
+                <div class="card mb-8">
+                    <div class="card-header">
+                        <h3 class="card-title">Recommended Institutions</h3>
+                        <p>Based on your course choices and preferences</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="institutions-grid">
+                            <!-- UCT -->
+                            <div class="institution-card">
+                                <div class="institution-logo">UCT</div>
+                                <h4>University of Cape Town</h4>
+                                <p class="highlight">Cape Town, Western Cape</p>
+                                <p>Ranked #1 in South Africa</p>
+                                <div class="course-match">
+                                    <div class="match-score">3 Courses</div>
+                                    <small>Matching your profile</small>
+                                </div>
+                                <div class="institution-info mt-4">
+                                    <p><strong>Type:</strong> Traditional University</p>
+                                    <p><strong>Application Fee:</strong> R200</p>
+                                    <p><strong>Closing Date:</strong> 30 Sept 2024</p>
+                                </div>
+                                <div class="text-center mt-6">
+                                    <button class="btn btn-primary" onclick="matricLinkApp.viewInstitution('uct')">
+                                        View Institution
+                                    </button>
+                                    <button class="btn btn-secondary" onclick="matricLinkApp.applyToInstitution('uct')">
+                                        Apply Now
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Wits -->
+                            <div class="institution-card">
+                                <div class="institution-logo">WITS</div>
+                                <h4>University of the Witwatersrand</h4>
+                                <p class="highlight">Johannesburg, Gauteng</p>
+                                <p>Leading research university</p>
+                                <div class="course-match">
+                                    <div class="match-score">2 Courses</div>
+                                    <small>Matching your profile</small>
+                                </div>
+                                <div class="institution-info mt-4">
+                                    <p><strong>Type:</strong> Traditional University</p>
+                                    <p><strong>Application Fee:</strong> R200</p>
+                                    <p><strong>Closing Date:</strong> 15 Oct 2024</p>
+                                </div>
+                                <div class="text-center mt-6">
+                                    <button class="btn btn-primary" onclick="matricLinkApp.viewInstitution('wits')">
+                                        View Institution
+                                    </button>
+                                    <button class="btn btn-secondary" onclick="matricLinkApp.applyToInstitution('wits')">
+                                        Apply Now
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- UP -->
+                            <div class="institution-card">
+                                <div class="institution-logo">UP</div>
+                                <h4>University of Pretoria</h4>
+                                <p class="highlight">Pretoria, Gauteng</p>
+                                <p>Largest residential university</p>
+                                <div class="course-match">
+                                    <div class="match-score">2 Courses</div>
+                                    <small>Matching your profile</small>
+                                </div>
+                                <div class="institution-info mt-4">
+                                    <p><strong>Type:</strong> Traditional University</p>
+                                    <p><strong>Application Fee:</strong> R300</p>
+                                    <p><strong>Closing Date:</strong> 28 Sept 2024</p>
+                                </div>
+                                <div class="text-center mt-6">
+                                    <button class="btn btn-primary" onclick="matricLinkApp.viewInstitution('up')">
+                                        View Institution
+                                    </button>
+                                    <button class="btn btn-secondary" onclick="matricLinkApp.applyToInstitution('up')">
+                                        Apply Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- All Institutions -->
+                <div class="card alternative-institutions">
+                    <div class="card-header">
+                        <h3 class="card-title">All Partner Institutions</h3>
+                        <p>Browse all universities and colleges in our network</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="institutions-grid">
+                            <!-- UJ -->
+                            <div class="institution-card">
+                                <div class="institution-logo">UJ</div>
+                                <h4>University of Johannesburg</h4>
+                                <p>Johannesburg, Gauteng</p>
+                                <div class="institution-info mt-4">
+                                    <p><strong>Type:</strong> Traditional University</p>
+                                    <p><strong>Application Fee:</strong> R200</p>
+                                    <p><strong>Closing Date:</strong> 30 Sept 2024</p>
+                                </div>
+                                <div class="text-center mt-6">
+                                    <button class="btn btn-primary" onclick="matricLinkApp.viewInstitution('uj')">
+                                        View Details
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- CPUT -->
+                            <div class="institution-card">
+                                <div class="institution-logo">CPUT</div>
+                                <h4>Cape Peninsula University of Technology</h4>
+                                <p>Cape Town, Western Cape</p>
+                                <div class="institution-info mt-4">
+                                    <p><strong>Type:</strong> University of Technology</p>
+                                    <p><strong>Application Fee:</strong> R150</p>
+                                    <p><strong>Closing Date:</strong> 15 Oct 2024</p>
+                                </div>
+                                <div class="text-center mt-6">
+                                    <button class="btn btn-primary" onclick="matricLinkApp.viewInstitution('cput')">
+                                        View Details
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- DUT -->
+                            <div class="institution-card">
+                                <div class="institution-logo">DUT</div>
+                                <h4>Durban University of Technology</h4>
+                                <p>Durban, KwaZulu-Natal</p>
+                                <div class="institution-info mt-4">
+                                    <p><strong>Type:</strong> University of Technology</p>
+                                    <p><strong>Application Fee:</strong> R150</p>
+                                    <p><strong>Closing Date:</strong> 20 Oct 2024</p>
+                                </div>
+                                <div class="text-center mt-6">
+                                    <button class="btn btn-primary" onclick="matricLinkApp.viewInstitution('dut')">
+                                        View Details
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- NWU -->
+                            <div class="institution-card">
+                                <div class="institution-logo">NWU</div>
+                                <h4>North-West University</h4>
+                                <p>Potchefstroom, North West</p>
+                                <div class="institution-info mt-4">
+                                    <p><strong>Type:</strong> Traditional University</p>
+                                    <p><strong>Application Fee:</strong> R250</p>
+                                    <p><strong>Closing Date:</strong> 25 Sept 2024</p>
+                                </div>
+                                <div class="text-center mt-6">
+                                    <button class="btn btn-primary" onclick="matricLinkApp.viewInstitution('nwu')">
+                                        View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+   
+</body>
+</html>

@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Matric Link</title>
+    <link rel="stylesheet" href="css/profile.css">
+    <script src="js/profile.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">ML</div>
+                    <div class="logo-text">Matric<span>Link</span></div>
+                </a>
+                
+                <nav class="nav-primary">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    <a href="course-recommendations.html" class="nav-link">Courses</a>
+                    <a href="institution-portals.html" class="nav-link">Institutions</a>
+                    <a href="results-submission.html" class="nav-link">Submit Results</a>
+                </nav>
+                
+                <div class="user-nav">
+                    <div class="user-avatar">JS</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="dashboard">
+            <aside class="sidebar">
+                <nav class="sidebar-nav">
+                    <a href="dashboard.html" class="sidebar-link">
+                        <i>📊</i> Overview
+                    </a>
+                    <a href="results-submission.html" class="sidebar-link">
+                        <i>📝</i> Submit Results
+                    </a>
+                    <a href="course-recommendations.html" class="sidebar-link">
+                        <i>🎯</i> Course Recommendations
+                    </a>
+                    <a href="institution-portals.html" class="sidebar-link">
+                        <i>🏫</i> Institutions
+                    </a>
+                    <a href="profile.html" class="sidebar-link active">
+                        <i>👤</i> My Profile
+                    </a>
+                </nav>
+            </aside>
+
+            <div class="dashboard-content">
+                <!-- Profile Header -->
+                <div class="card mb-8">
+                    <div class="card-header">
+                        <div class="profile-header">
+                            <div class="user-avatar-large">JS</div>
+                            <div class="profile-info">
+                                <h2 class="card-title">John Student</h2>
+                                <p>Matriculant 2024 | Johannesburg, Gauteng</p>
+                                <p class="highlight">Member since: January 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">📊</div>
+                                <h4>Academic Profile</h4>
+                                <p><strong>Average:</strong> 76%</p>
+                                <p><strong>Subjects:</strong> 7 Completed</p>
+                                <p><strong>Status:</strong> Results Submitted</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🎯</div>
+                                <h4>Applications</h4>
+                                <p><strong>Courses Applied:</strong> 3</p>
+                                <p><strong>Institutions:</strong> 2</p>
+                                <p><strong>Status:</strong> In Progress</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">⭐</div>
+                                <h4>Achievements</h4>
+                                <p><strong>Profile Complete:</strong> 85%</p>
+                                <p><strong>Recommendations:</strong> 5 Courses</p>
+                                <p><strong>Match Score:</strong> 92%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-grid mb-8">
+                    <!-- Personal Information -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Personal Information</h3>
+                        </div>
+                        <div class="card-body">
+                            <form id="personalInfoForm">
+                                <div class="form-group">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" value="John Student">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" value="john.student@email.com">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" value="+27 83 123 4567">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">ID Number</label>
+                                    <input type="text" class="form-control" value="050101 1234 567">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Physical Address</label>
+                                    <textarea class="form-control" rows="3">123 Main Street, Johannesburg, 2000</textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Update Information</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Academic Information -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Academic Information</h3>
+                        </div>
+                        <div class="card-body">
+                            <form id="academicInfoForm">
+                                <div class="form-group">
+                                    <label class="form-label">High School</label>
+                                    <input type="text" class="form-control" value="Parktown High School for Girls">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Province</label>
+                                    <select class="form-control">
+                                        <option>Gauteng</option>
+                                        <option>Western Cape</option>
+                                        <option>KwaZulu-Natal</option>
+                                        <option>Eastern Cape</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Matric Year</label>
+                                    <select class="form-control">
+                                        <option>2024</option>
+                                        <option>2023</option>
+                                        <option>2022</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Curriculum</label>
+                                    <select class="form-control">
+                                        <option>NSC (National Senior Certificate)</option>
+                                        <option>IEB (Independent Examination Board)</option>
+                                        <option>Cambridge</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Update Academic Info</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Career Preferences -->
+                <div class="card mb-8">
+                    <div class="card-header">
+                        <h3 class="card-title">Career Preferences & Interests</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="careerPreferencesForm">
+                            <div class="form-group">
+                                <label class="form-label">Career Interests</label>
+                                <div class="interests-grid">
+                                    <label class="interest-option">
+                                        <input type="checkbox" name="interests" value="technology" checked>
+                                        <span>Technology & IT</span>
+                                    </label>
+                                    <label class="interest-option">
+                                        <input type="checkbox" name="interests" value="engineering" checked>
+                                        <span>Engineering</span>
+                                    </label>
+                                    <label class="interest-option">
+                                        <input type="checkbox" name="interests" value="business">
+                                        <span>Business & Commerce</span>
+                                    </label>
+                                    <label class="interest-option">
+                                        <input type="checkbox" name="interests" value="health">
+                                        <span>Health Sciences</span>
+                                    </label>
+                                    <label class="interest-option">
+                                        <input type="checkbox" name="interests" value="arts">
+                                        <span>Arts & Humanities</span>
+                                    </label>
+                                    <label class="interest-option">
+                                        <input type="checkbox" name="interests" value="sciences">
+                                        <span>Natural Sciences</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Preferred Institution Types</label>
+                                <div>
+                                    <label><input type="checkbox" name="institution_type" value="university" checked> University</label>
+                                    <label><input type="checkbox" name="institution_type" value="university_of_technology"> University of Technology</label>
+                                    <label><input type="checkbox" name="institution_type" value="college"> TVET College</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Preferred Study Locations</label>
+                                <select class="form-control" multiple>
+                                    <option value="gauteng" selected>Gauteng</option>
+                                    <option value="western_cape" selected>Western Cape</option>
+                                    <option value="kzn">KwaZulu-Natal</option>
+                                    <option value="eastern_cape">Eastern Cape</option>
+                                </select>
+                                <small>Hold Ctrl/Cmd to select multiple locations</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Study Mode Preference</label>
+                                <select class="form-control">
+                                    <option value="full_time">Full-time</option>
+                                    <option value="part_time">Part-time</option>
+                                    <option value="distance">Distance Learning</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Save Preferences</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Application History -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Application History</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="courses-grid">
+                            <div class="course-card">
+                                <div class="course-header">
+                                    <h4 class="course-title">Computer Science</h4>
+                                    <p class="course-institution">University of Cape Town</p>
+                                    <span class="status-badge status-in-progress">In Progress</span>
+                                </div>
+                                <div class="course-body">
+                                    <p><strong>Applied:</strong> 15 August 2024</p>
+                                    <p><strong>Status:</strong> Documents Under Review</p>
+                                    <p><strong>Next Step:</strong> Awaiting response</p>
+                                    <div class="progress-bar mb-4">
+                                        <div class="progress-fill" style="width: 60%"></div>
+                                    </div>
+                                    <button class="btn btn-primary">View Application</button>
+                                </div>
+                            </div>
+
+                            <div class="course-card">
+                                <div class="course-header">
+                                    <h4 class="course-title">Electrical Engineering</h4>
+                                    <p class="course-institution">Wits University</p>
+                                    <span class="status-badge status-pending">Pending</span>
+                                </div>
+                                <div class="course-body">
+                                    <p><strong>Applied:</strong> 20 August 2024</p>
+                                    <p><strong>Status:</strong> Application Submitted</p>
+                                    <p><strong>Next Step:</strong> Upload documents</p>
+                                    <div class="progress-bar mb-4">
+                                        <div class="progress-fill" style="width: 30%"></div>
+                                    </div>
+                                    <button class="btn btn-primary">Continue Application</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">Matric<span>Link</span></div>
+                    <p>Empowering South African students to make informed decisions about their tertiary education future.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="course-recommendations.html">Courses</a></li>
+                        <li><a href="institution-portals.html">Institutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="results-submission.html">Submit Results</a></li>
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="#">Application Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2024 Matric Link. All rights reserved. | Empowering South Africa's Future
+            </div>
+        </div>
+    </footer>
+    </main>
+
+   
+</body>
+</html>

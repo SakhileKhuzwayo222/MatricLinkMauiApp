@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Recommendations - Matric Link</title>
+    <link rel="stylesheet" href="css/course-recommendations.css">
+    <script src="js/course-recommendations.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">ML</div>
+                    <div class="logo-text">Matric<span>Link</span></div>
+                </a>
+                
+                <nav class="nav-primary">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    <a href="course-recommendations.html" class="nav-link active">Courses</a>
+                    <a href="institution-portals.html" class="nav-link">Institutions</a>
+                    <a href="results-submission.html" class="nav-link">Submit Results</a>
+                </nav>
+                
+                <div class="user-nav">
+                    <div class="user-avatar">JS</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="dashboard">
+            <aside class="sidebar">
+                <nav class="sidebar-nav">
+                    <a href="dashboard.html" class="sidebar-link">
+                        <i>📊</i> Overview
+                    </a>
+                    <a href="results-submission.html" class="sidebar-link">
+                        <i>📝</i> Submit Results
+                    </a>
+                    <a href="course-recommendations.html" class="sidebar-link active">
+                        <i>🎯</i> Course Recommendations
+                    </a>
+                    <a href="institution-portals.html" class="sidebar-link">
+                        <i>🏫</i> Institutions
+                    </a>
+                    <a href="profile.html" class="sidebar-link">
+                        <i>👤</i> My Profile
+                    </a>
+                </nav>
+            </aside>
+
+            <div class="dashboard-content">
+                <!-- Recommendation Header -->
+                <div class="card mb-8">
+                    <div class="card-header">
+                        <h2 class="card-title">Your Personalized Course Recommendations</h2>
+                        <p>Based on your matric results and career interests</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">🎯</div>
+                                <h4>Match Accuracy</h4>
+                                <p class="highlight">92% Average</p>
+                                <p>Based on 5 key factors</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">📊</div>
+                                <h4>Results Analyzed</h4>
+                                <p class="highlight">7 Subjects</p>
+                                <p>Mathematics: 78%</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">💼</div>
+                                <h4>Career Interests</h4>
+                                <p class="highlight">Technology & Business</p>
+                                <p>3 interest matches</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Recommendations -->
+                <div class="card mb-8">
+                    <div class="card-header">
+                        <h3 class="card-title">Top Recommendations For You</h3>
+                        <p>Courses with the highest match to your profile</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="courses-grid">
+                            <!-- Computer Science -->
+                            <div class="course-card">
+                                <div class="course-header">
+                                    <h4 class="course-title">Computer Science</h4>
+                                    <p class="course-institution">University of Cape Town</p>
+                                    <div class="match-badge">95% Match</div>
+                                </div>
+                                <div class="course-body">
+                                    <div class="course-requirements">
+                                        <div class="requirement-item">
+                                            <span>Mathematics:</span>
+                                            <span class="highlight">78% ✓</span>
+                                        </div>
+                                        <div class="requirement-item">
+                                            <span>Physical Science:</span>
+                                            <span class="highlight">72% ✓</span>
+                                        </div>
+                                        <div class="requirement-item">
+                                            <span>English:</span>
+                                            <span class="highlight">82% ✓</span>
+                                        </div>
+                                    </div>
+                                    <p class="mb-4">Focus on software development, algorithms, artificial intelligence, and computer systems design.</p>
+                                    <div class="course-info">
+                                        <p><strong>Duration:</strong> 3-4 years</p>
+                                        <p><strong>Career Paths:</strong> Software Developer, Data Scientist, Systems Analyst</p>
+                                        <p><strong>Application Deadline:</strong> 30 September 2024</p>
+                                    </div>
+                                    <div class="match-score">
+                                        <div class="score">95% Match</div>
+                                        <small>Based on your academic profile</small>
+                                    </div>
+                                    <div class="action-buttons mt-6">
+                                        <button class="btn btn-primary" onclick="viewCourseDetails(1)">
+                                            View Full Details
+                                        </button>
+                                        <button class="btn btn-secondary" onclick="startApplication(1)">
+                                            Start Application
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Electrical Engineering -->
+                            <div class="course-card">
+                                <div class="course-header">
+                                    <h4 class="course-title">Electrical Engineering</h4>
+                                    <p class="course-institution">Wits University</p>
+                                    <div class="match-badge">88% Match</div>
+                                </div>
+                                <div class="course-body">
+                                    <div class="course-requirements">
+                                        <div class="requirement-item">
+                                            <span>Mathematics:</span>
+                                            <span class="highlight">78% ✓</span>
+                                        </div>
+                                        <div class="requirement-item">
+                                            <span>Physical Science:</span>
+                                            <span class="highlight">72% ✓</span>
+                                        </div>
+                                        <div class="requirement-item">
+                                            <span>English:</span>
+                                            <span class="highlight">82% ✓</span>
+                                        </div>
+                                    </div>
+                                    <p class="mb-4">Design and develop electrical systems, electronic devices, and power generation systems.</p>
+                                    <div class="course-info">
+                                        <p><strong>Duration:</strong> 4 years</p>
+                                        <p><strong>Career Paths:</strong> Electrical Engineer, Electronics Designer, Power Systems Engineer</p>
+                                        <p><strong>Application Deadline:</strong> 15 October 2024</p>
+                                    </div>
+                                    <div class="match-score">
+                                        <div class="score">88% Match</div>
+                                        <small>Based on your academic profile</small>
+                                    </div>
+                                    <div class="action-buttons mt-6">
+                                        <button class="btn btn-primary" onclick="viewCourseDetails(2)">
+                                            View Full Details
+                                        </button>
+                                        <button class="btn btn-secondary" onclick="startApplication(2)">
+                                            Start Application
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Business Science -->
+                            <div class="course-card">
+                                <div class="course-header">
+                                    <h4 class="course-title">Business Science</h4>
+                                    <p class="course-institution">University of Pretoria</p>
+                                    <div class="match-badge">85% Match</div>
+                                </div>
+                                <div class="course-body">
+                                    <div class="course-requirements">
+                                        <div class="requirement-item">
+                                            <span>Mathematics:</span>
+                                            <span class="highlight">78% ✓</span>
+                                        </div>
+                                        <div class="requirement-item">
+                                            <span>English:</span>
+                                            <span class="highlight">82% ✓</span>
+                                        </div>
+                                        <div class="requirement-item">
+                                            <span>Additional Language:</span>
+                                            <span class="highlight">75% ✓</span>
+                                        </div>
+                                    </div>
+                                    <p class="mb-4">Combine business principles with analytical and quantitative skills for modern business challenges.</p>
+                                    <div class="course-info">
+                                        <p><strong>Duration:</strong> 3-4 years</p>
+                                        <p><strong>Career Paths:</strong> Business Analyst, Marketing Manager, Financial Analyst</p>
+                                        <p><strong>Application Deadline:</strong> 28 September 2024</p>
+                                    </div>
+                                    <div class="match-score">
+                                        <div class="score">85% Match</div>
+                                        <small>Based on your academic profile</small>
+                                    </div>
+                                    <div class="action-buttons mt-6">
+                                        <button class="btn btn-primary" onclick="viewCourseDetails(3)">
+                                            View Full Details
+                                        </button>
+                                        <button class="btn btn-secondary" onclick="startApplication(3)">
+                                            Start Application
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alternative Recommendations -->
+                <div class="card alternative-courses">
+                    <div class="card-header">
+                        <h3 class="card-title">Alternative Options</h3>
+                        <p>Other courses that match your profile</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="courses-grid">
+                            <!-- Information Technology -->
+                            <div class="course-card">
+                                <div class="course-header">
+                                    <h4 class="course-title">Information Technology</h4>
+                                    <p class="course-institution">Cape Peninsula University of Technology</p>
+                                    <div class="match-badge">80% Match</div>
+                                </div>
+                                <div class="course-body">
+                                    <p>Practical IT skills with focus on networking, databases, and system administration.</p>
+                                    <div class="course-info">
+                                        <p><strong>Duration:</strong> 3 years</p>
+                                        <p><strong>Career Paths:</strong> Network Administrator, Database Manager, IT Support</p>
+                                        <p><strong>Application Deadline:</strong> 15 October 2024</p>
+                                    </div>
+                                    <div class="action-buttons mt-4">
+                                        <button class="btn btn-primary" onclick="viewCourseDetails(4)">
+                                            View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Data Science -->
+                            <div class="course-card">
+                                <div class="course-header">
+                                    <h4 class="course-title">Data Science</h4>
+                                    <p class="course-institution">Stellenbosch University</p>
+                                    <div class="match-badge">78% Match</div>
+                                </div>
+                                <div class="course-body">
+                                    <p>Statistical analysis, machine learning, and data visualization techniques.</p>
+                                    <div class="course-info">
+                                        <p><strong>Duration:</strong> 3-4 years</p>
+                                        <p><strong>Career Paths:</strong> Data Analyst, Machine Learning Engineer, Business Intelligence</p>
+                                        <p><strong>Application Deadline:</strong> 20 October 2024</p>
+                                    </div>
+                                    <div class="action-buttons mt-4">
+                                        <button class="btn btn-primary" onclick="viewCourseDetails(5)">
+                                            View Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
